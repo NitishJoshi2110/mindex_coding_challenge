@@ -53,7 +53,7 @@ public class Employee {
         this.department = department;
     }
 
-    public List<Employee> getDirectReports() {
+    public List<Employee> getCurrentReport() {
         return directReports;
     }
 

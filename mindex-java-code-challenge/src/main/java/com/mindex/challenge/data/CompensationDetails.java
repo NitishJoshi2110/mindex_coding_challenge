@@ -2,16 +2,22 @@ package com.mindex.challenge.data;
 
 import java.time.LocalDate;
 
-/**
- * CompensationDetails stores salary and effectiveDate obtained from CompensationController from RequestBody
- */
 
 public class CompensationDetails {
-    float salary;
     LocalDate effectiveDate;
+
+    float salary;
 
     public CompensationDetails(){
 
+    }
+
+    public LocalDate getEffectiveDate() {
+        return effectiveDate;
+    }
+
+    public void setEffectiveDate(LocalDate effectiveDate) {
+        this.effectiveDate = effectiveDate;
     }
 
     public float getSalary() {
@@ -22,11 +28,5 @@ public class CompensationDetails {
         this.salary = salary;
     }
 
-    public LocalDate getEffectiveDate() {
-        return effectiveDate;
-    }
 
-    public void setEffectiveDate(LocalDate effectiveDate) {
-        this.effectiveDate = effectiveDate;
-    }
 }

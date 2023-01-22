@@ -9,11 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * ReportingStructure Controller creates and returns reporting Structure for
- * specified employee id as input parameter
- *
- */
+
 @RestController
 public class ReportingStructureController {
 
@@ -22,10 +18,10 @@ public class ReportingStructureController {
     @Autowired
     private ReportingStructureService reportingStructureService;
 
-    @GetMapping("/employee/{id}/reportingStructure")
-    public ReportingStructure create(@PathVariable String id) {
-        LOG.debug("Received employee id, and creating ReportingStructure for employee [{}]", id);
+    @GetMapping("/employee/report/{id}")
+    public ReportingStructure report(@PathVariable String id) {
+        LOG.debug("Creating Report for employee [{}]", id);
 
-        return reportingStructureService.create(id);
+        return reportingStructureService.report(id);
     }
 }

@@ -17,6 +17,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
+
+
     @Override
     public Employee create(Employee employee) {
         LOG.debug("Creating employee [{}]", employee);
@@ -29,7 +31,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee read(String id) {
-        LOG.debug("Creating employee with id [{}]", id);
+        LOG.debug("Reading employee with id [{}]", id);
 
         Employee employee = employeeRepository.findByEmployeeId(id);
 
@@ -46,4 +48,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         return employeeRepository.save(employee);
     }
+
+
 }
